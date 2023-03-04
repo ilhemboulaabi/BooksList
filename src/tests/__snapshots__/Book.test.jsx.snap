@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book should render self 1`] = `
+<ForwardRef(Grid)
+  item={true}
+  xs={12}
+>
+  <Styled(Component)
+    raised={true}
+  >
+    <ForwardRef(CardMedia)
+      alt="Live from space album cover"
+      component="img"
+      image="https://covers.openlibrary.org/b/id/882715-L.jpg"
+      sx={
+        Object {
+          "maxHeight": 200,
+          "width": 125,
+        }
+      }
+    />
+    <Styled(Component)>
+      <ForwardRef(CardContent)>
+        <Styled(Component)
+          variant="h5"
+        >
+          The Power of Darkness
+        </Styled(Component)>
+        <ForwardRef(Typography)
+          color="textSecondary"
+          variant="subtitle1"
+        >
+          By 
+          Edith Nesbit
+        </ForwardRef(Typography)>
+      </ForwardRef(CardContent)>
+      <Styled(Component)
+        color="primary"
+        size="small"
+      >
+        <Link
+          to="/works/OL407498W"
+        >
+           More...
+        </Link>
+      </Styled(Component)>
+    </Styled(Component)>
+    <Styled(Component)
+      startIcon={<UNDEFINED />}
+      variant="contained"
+    >
+      Favorite
+    </Styled(Component)>
+  </Styled(Component)>
+</ForwardRef(Grid)>
+`;
