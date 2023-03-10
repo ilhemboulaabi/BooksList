@@ -1,20 +1,20 @@
-import { Theme } from "@mui/material";
+import { Theme } from '@mui/material';
 
 export const theme: any = {
   palette: {
     primary: {
-      main: "#54AEFF",
-      light: "#B6E3FF",
-      dark: "#0969DA"
+      main: '#54AEFF',
+      light: '#B6E3FF',
+      dark: '#0969DA'
     },
     secondary: {
-      main: "#fd8c73",
-      light: "#fff8c5",
+      main: '#fd8c73',
+      light: '#fff8c5'
     },
     main: {
-      white: "#ffffff",
-      black: "#000000",
-      grey: "#8798ad",
+      white: '#ffffff',
+      black: '#000000',
+      grey: '#8798ad'
     }
   }
 };
@@ -22,7 +22,7 @@ export const theme: any = {
 export const responsivePageSize = {
   sm: '600px',
   md: '900px',
-  lg: '1200px',
+  lg: '1200px'
 };
 
 export const plateform = {

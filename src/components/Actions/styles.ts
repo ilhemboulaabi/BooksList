@@ -1,10 +1,10 @@
-import { Box, styled, TextField } from "@mui/material";
-import { palette, spacing } from "../../styles/accessors";
-import { plateform } from "../../styles/theme";
+import { Box, styled, TextField } from '@mui/material';
+import { palette, spacing } from '../../styles/accessors';
+import { plateform } from '../../styles/theme';
 
 export const SCTextField = styled(TextField)`
   && {
-    background-color: ${palette("main")("white")};
+    background-color: ${palette('main')('white')};
     margin: ${spacing(1)} ${spacing(1)} ${spacing(1)} 0;
     width: 400px;
     border-radius: 5px;
@@ -23,7 +23,7 @@ export const SCBox = styled(Box)`
     box-sizing: border-box;
     z-index: 100;
     padding: 0 ${spacing(1)};
-    background-color: ${palette("primary")("main")};
+    background-color: ${palette('primary')('main')};
     @media ${plateform.medium} {
       padding: 0 ${spacing(9)};
     }

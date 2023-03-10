@@ -1,14 +1,16 @@
-import { Box, Button, Card, Typography } from "@mui/material";
-import { palette, spacing } from "../../styles/accessors";
-import styled from "../../styles/styled-components";
-import { plateform } from "../../styles/theme";
+import {
+  Box, Button, Card, Typography
+} from '@mui/material';
+import { palette, spacing } from '../../styles/accessors';
+import styled from '../../styles/styled-components';
+import { plateform } from '../../styles/theme';
 
 export const SCCard = styled(Card)<{isbookdetails?: string}>`
   && {
     display: flex;
     width: fit-content;
     box-shadow: none;
-    height: ${(props) => props?.isbookdetails ? '300px' : '200px'};
+    height: ${(props) => (props?.isbookdetails ? '300px' : '200px')};
     width: 400px;
     @media ${plateform.medium} {
       width: 600px;
@@ -32,8 +34,8 @@ export const SCFavoriteButton = styled(Button)`
     margin-left: auto;
     margin-top: auto;
     height: 50px;
-    color: ${palette("main")("white")};
-    background: ${palette("secondary")("main")};
+    color: ${palette('main')('white')};
+    background: ${palette('secondary')('main')};
   }
 `;
 

@@ -10,15 +10,13 @@ export interface IDispatchBookDetailsProps {
 
 const mapStateToProps = (state: IStateProps) => ({
   bookDetails: state.bookDetailsState.bookDetails,
-  isBookDetailsLoading: state.bookDetailsState.isBookDetailsLoading,
+  isBookDetailsLoading: state.bookDetailsState.isBookDetailsLoading
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  return {
-    actions: {
-      bookDetails: bindActionCreators(BookDetailsActions, dispatch)
-    }
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  actions: {
+    bookDetails: bindActionCreators(BookDetailsActions, dispatch)
   }
-};
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookDetails);

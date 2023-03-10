@@ -1,29 +1,27 @@
-import { Dispatch } from "redux";
-import { fetchBookDetails } from "../../api/books";
-import { IBookDetails } from "../../types";
-import BOOK_DETAILS_ACTIONS from "../actiontypes/bookDetails";
+import { Dispatch } from 'redux';
+import { fetchBookDetails } from '../../api/books';
+import { IBookDetails } from '../../types';
+import BOOK_DETAILS_ACTIONS from '../actiontypes/bookDetails';
 
 const initBookDetailsSuccess = (bookDetails: IBookDetails) => ({
   type: BOOK_DETAILS_ACTIONS.INIT_BOOK_DETAILS_SUCCESS,
-  bookDetails,
+  bookDetails
 });
 
 const initBookDetailsFailure = (error: string) => ({
   type: BOOK_DETAILS_ACTIONS.INIT_BOOK_DETAILS_FAILED,
-  error,
+  error
 });
 
 const initBookDetails = () => ({
-  type: BOOK_DETAILS_ACTIONS.INIT_BOOK_DETAILS,
+  type: BOOK_DETAILS_ACTIONS.INIT_BOOK_DETAILS
 });
 
-export const loadBookDetails = (workId: string) => {
-  return (dispatch: Dispatch) => {
-    dispatch(initBookDetails());
+export const loadBookDetails = (workId: string) => (dispatch: Dispatch) => {
+  dispatch(initBookDetails());
 
-    return fetchBookDetails(workId).then(
-      (response) => dispatch(initBookDetailsSuccess(response)),
-      (error) => dispatch(initBookDetailsFailure(error)),
-    );
-  };
-}
+  return fetchBookDetails(workId).then(
+    (response) => dispatch(initBookDetailsSuccess(response)),
+    (error) => dispatch(initBookDetailsFailure(error))
+  );
+};

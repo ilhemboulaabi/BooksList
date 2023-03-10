@@ -6,9 +6,11 @@
     "jest": true
   },
   "extends": [
-    "airbnb"
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
   ],
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -18,14 +20,96 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react-hooks"
   ],
   "rules": {
-    // ignore some eslint-config-airbnb label rules
-    "jsx-a11y/label-has-for": 0,
-    "import/prefer-default-export": 0,
-    "jsx-a11y/label-has-associated-control": 0,
+    "no-use-before-define": 0,
+    "no-plusplus": 0,
+    "consistent-return": 0,
     "no-underscore-dangle": 0,
-    "react/jsx-props-no-spreading": "off"
+    "comma-dangle": [1, "never"],
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["draft"] }],
+    "no-unused-vars": 0,
+    "prefer-template": 0,
+    "react/prop-types": 0,
+    "react/sort-comp": 0,
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/promise-function-async": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".stories.js"] }],
+    "react/destructuring-assignment": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/array-type": 1,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-inferrable-types": 1,
+    "@typescript-eslint/consistent-type-assertions": 1,
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-useless-path-segments": "off",
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore",
+        "exceptions": [""]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "max-len": ["error", { "code": 130 }],
+    // a11y
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "object-curly-spacing": [2, "always"],
+    "semi-style": 1,
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-types": "off",
+    "camelcase": 0,
+    "react/function-component-definition": 0,
+    "no-shadow": 0,
+    "react/jsx-no-useless-fragment": 0,
+    "default-param-last": 0,
+    "react/require-default-props": 0,
+    "react/no-unused-prop-types": 0,
+    " react/default-props-match-prop-types": 0,
+    "react/jsx-no-constructed-context-values": 0,
+    "@typescript-eslint/no-non-null-asserted-optional-chain": 0,
+    "@typescript-eslint/no-extra-non-null-assertion": 0,
+    "react/no-unstable-nested-components": "off",
+    "no-unsafe-optional-chaining": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "react/no-array-index-key": 0,
+    "import/no-cycle": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+       "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
+
 }

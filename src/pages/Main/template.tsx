@@ -1,5 +1,5 @@
 import { Pagination } from '@mui/material';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useState, useEffect } from 'react';
 import Actions from '../../components/Actions/template';
 import { Books } from '../../components/Books/template';
 import { IBookStateProps } from '../../types';
@@ -16,16 +16,16 @@ const Main: React.FC<IBookStateProps & { actions: any }> = ({
 
   const handleBookChange = (_: ChangeEvent<{}>, newValue: string) => {
     setbookTitle(newValue);
-  }
+  };
 
   const handelPageChange = (event: any, value: number) => {
     if (currentPage !== value) {
       setCurrentPage(value);
     }
-  }
+  };
 
-  React.useEffect(() => {
-    bookTitle && actions.books.loadBooks(bookTitle, currentPage);
+  useEffect(() => {
+    if (bookTitle) actions.books.loadBooks(bookTitle, currentPage);
   }, [actions.books, actions.books.loadBooks, bookTitle, currentPage]);
 
   return (
@@ -39,15 +39,16 @@ const Main: React.FC<IBookStateProps & { actions: any }> = ({
         loading={isBooksLoading}
         bookTitle={bookTitle}
       />
-      {books.length !== 0 && numFound > 100 &&
+      {books.length !== 0 && numFound > 100
+        && (
         <Pagination
           count={Math.floor(numFound / 100) + 1}
           page={currentPage}
           onChange={(event, value) => handelPageChange(event, value)}
         />
-      }
+        )}
     </SCContainer>
   );
-}
+};
 
 export default Main;

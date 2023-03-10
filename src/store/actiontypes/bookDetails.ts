@@ -6,9 +6,6 @@ const BOOK_DETAILS_ACTIONS = keyMirror({
   INIT_BOOK_DETAILS_FAILED: null
 });
 
-
 export default {
-	...BOOK_DETAILS_ACTIONS,
+  ...BOOK_DETAILS_ACTIONS
 };
-
-

@@ -30,7 +30,10 @@ exports[`Book should render self 1`] = `
           color="textSecondary"
           variant="subtitle1"
         >
-          By 
+          <b>
+            By:
+          </b>
+           
           Edith Nesbit
         </ForwardRef(Typography)>
       </ForwardRef(CardContent)>
@@ -46,7 +49,7 @@ exports[`Book should render self 1`] = `
       </Styled(Component)>
     </Styled(Component)>
     <Styled(Component)
-      startIcon={<UNDEFINED />}
+      startIcon={<Memo />}
       variant="contained"
     >
       Favorite

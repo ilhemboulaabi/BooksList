@@ -1,12 +1,13 @@
+/* eslint-disable max-len */
 import React from 'react';
 import {
   LinearProgress,
   Box,
   Alert
-} from "@mui/material";
+} from '@mui/material';
+import { useLocation } from 'react-router-dom';
 import { IBookDetails } from '../../types';
 import Book from '../../components/Book/template';
-import { useLocation } from 'react-router-dom';
 
 const BookDetails = ({ bookDetails, isBookDetailsLoading, actions }: { bookDetails: IBookDetails, isBookDetailsLoading: boolean, actions: any }) => {
   const location = useLocation();
@@ -30,6 +31,6 @@ const BookDetails = ({ bookDetails, isBookDetailsLoading, actions }: { bookDetai
         />
       )
   );
-}
+};
 
 export default BookDetails;

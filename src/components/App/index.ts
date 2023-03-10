@@ -1,3 +1,3 @@
-import { App } from "./template";
+import { App } from './template';
 
 export default App;
